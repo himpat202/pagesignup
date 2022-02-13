@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SignUp</title>
+    <script type="text/javascript">
+        function validate() {
+            let res="";
+            let k=1;
+            var str =
+                document.getElementById("t1").value;
+                var str1 =  document.getElementById("t2").value;
+               
+            if (str.match(/[a-z]/g) && str.match(
+                    /[A-Z]/g) && str.match(
+                    /[0-9]/g) && str.match(
+                    /[^a-zA-Z\d]/g) && str.length >= 8 )
+                    {
+                        if(str!=str1)
+                                  {
+                                       res+="password and confirm password are not same";
+                                       k=0;
+                                  }
+                                 
+                    }
+                    else{
+                             res+="password is weak";
+                             k=0;
+                         } 
+                    if(k==0)
+                    {
+                        alert(res);
+                    }
+            
+        }
+    </script>
+</head>
+</head>
+<body class="c1">
+    <form >
+      <div class="container">
+        <h1>Sign Up</h1>
+        <hr>
+    
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="eg:abc@xyz.com"  name="email" required >
+    
+        <label for="psw" ><b>Password</b></label>
+        <input type="password" id="t1" placeholder="Enter a strong password" name="psw" required>
+    
+        <label for="psw-repeat"><b>Confirm Password</b></label>
+        <input type="password" id="t2" placeholder="Repeat Password" name="psw-repeat" required>
+        
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+        
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+    
+        <div class="clearfix">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn" onclick="validate()">Sign Up</button>
+        </div>
+      </div>
+    </form>
+    
+    </body>
+</html>
