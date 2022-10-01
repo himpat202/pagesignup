@@ -1,6 +1,9 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
 
+#heading1{
+  text-align: center;
+}
 input[type=text], input[type=password] {
   width: 100%;
   padding: 15px;
